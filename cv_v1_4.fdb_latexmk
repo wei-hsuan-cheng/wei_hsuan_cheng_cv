@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1752900705.21094 "/Users/whcheng/latex_projects/career/wei_hsuan_cheng_cv/cv_v1_4.tex" "cv_v1_4.pdf" "cv_v1_4" 1752900705.87522 0
-  "/Users/whcheng/latex_projects/career/wei_hsuan_cheng_cv/cv_v1_4.tex" 1752900704.99746 16390 de5155dea366d950bbf04f5e325896fa ""
+["pdflatex"] 1752909539.22195 "/Users/whcheng/latex_projects/career/wei_hsuan_cheng_cv/cv_v1_4.tex" "cv_v1_4.pdf" "cv_v1_4" 1752909539.93521 0
+  "/Users/whcheng/latex_projects/career/wei_hsuan_cheng_cv/cv_v1_4.tex" 1752909539.00151 16955 e1d4e2e62264bbaf5f99e794b7144c8d ""
   "/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/fontawesome5/fa5brands0.enc" 1622837620 2920 d63721872b8c77041b88e51b8f7c291d ""
   "/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/fontawesome5/fa5free1.enc" 1622837620 3042 0e2b14b9be7d01075a4c4591d5d1781b ""
   "/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/fontawesome5/fa5free2.enc" 1622837620 2906 e48aa7c95dea478a2e011bcb4f7878c9 ""
@@ -118,8 +118,8 @@
   "/usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1714099143.46576 5467645 128b85b7cde5f5edc5cb7f1dd7ff8736 ""
   "/usr/local/texlive/2024/texmf-var/web2c/pdftex/pdflatex.fmt" 1714099116 8221420 4972ee1a97eace71cf07e5886632654f ""
   "/usr/local/texlive/2024/texmf.cnf" 1710266656 577 e590dabc9e28c5b61546e15f63eebcdf ""
-  "cv_v1_4.aux" 1752900705.79555 2192 462f305faf84b35009d5b9ede997dfc1 "pdflatex"
-  "cv_v1_4.tex" 1752900704.99746 16390 de5155dea366d950bbf04f5e325896fa ""
+  "cv_v1_4.aux" 1752909539.85265 2192 0376c4c4d4a8e6410556fe7cd4b6c5b9 "pdflatex"
+  "cv_v1_4.tex" 1752909539.00151 16955 e1d4e2e62264bbaf5f99e794b7144c8d ""
   (generated)
   "cv_v1_4.aux"
   "cv_v1_4.log"
