@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.4.26)  26 JUL 2025 21:44
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.4.26)  26 JUL 2025 21:52
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**/Users/whcheng/latex_projects/career/wei_hsuan_cheng_cv/cv_v1_6.tex
-(/Users/whcheng/latex_projects/career/wei_hsuan_cheng_cv/cv_v1_6.tex
+**/Users/whcheng/latex_projects/career/wei_hsuan_cheng_cv/cv_profile_v1_5.tex
+(/Users/whcheng/latex_projects/career/wei_hsuan_cheng_cv/cv_profile_v1_5.tex
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
 (/usr/local/texlive/2024/texmf-dist/tex/latex/base/article.cls
@@ -458,8 +458,8 @@ LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
 LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 149.
  (/usr/local/texlive/2024/texmf-dist/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-) (./cv_v1_6.aux)
-\openout1 = `cv_v1_6.aux'.
+) (./cv_profile_v1_5.aux)
+\openout1 = `cv_profile_v1_5.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 149.
 LaTeX Font Info:    ... okay on input line 149.
@@ -575,7 +575,7 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 
 {/usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/fontawesome5/fa5free2.enc}{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/fontawesome5/fa5free1.enc}{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/fontawesome5/fa5brands0.enc}{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc} <./profile/whcheng_profile.jpg>] [2{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}] [3] 
 enddocument/afterlastpage: lastpage setting LastPage.
-(./cv_v1_6.aux)
+(./cv_profile_v1_5.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
@@ -583,14 +583,14 @@ L3 programming layer <2024-02-20>
  ) 
 Here is how much of TeX's memory you used:
  16690 strings out of 474116
- 285650 string characters out of 5743682
+ 285746 string characters out of 5743682
  1948187 words of memory out of 5000000
  38785 multiletter control sequences out of 15000+600000
  596399 words of font info for 58 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,10n,79p,571b,524s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,10n,79p,579b,524s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2024/texmf-dist/fonts/type1/public/fontawesome5/FontAwesome5Brands-Regular.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/fontawesome5/FontAwesome5Free-Regular.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/fontawesome5/FontAwesome5Free-Solid.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmri10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmri9.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmsy10.pfb>
-Output written on cv_v1_6.pdf (3 pages, 711056 bytes).
+Output written on cv_profile_v1_5.pdf (3 pages, 711056 bytes).
 PDF statistics:
  121 PDF objects out of 1000 (max. 8388607)
  92 compressed objects within 1 object stream

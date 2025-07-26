@@ -2,8 +2,8 @@ PWD /Users/whcheng/latex_projects/career/wei_hsuan_cheng_cv
 INPUT /usr/local/texlive/2024/texmf.cnf
 INPUT /usr/local/texlive/2024/texmf-dist/web2c/texmf.cnf
 INPUT /usr/local/texlive/2024/texmf-var/web2c/pdftex/pdflatex.fmt
-INPUT /Users/whcheng/latex_projects/career/wei_hsuan_cheng_cv/cv_v1_6.tex
-OUTPUT cv_v1_6.log
+INPUT /Users/whcheng/latex_projects/career/wei_hsuan_cheng_cv/cv_profile_v1_5.tex
+OUTPUT cv_profile_v1_5.log
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/base/article.cls
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/base/article.cls
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/base/size10.clo
@@ -187,10 +187,10 @@ INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/lm/ot1lmr.fd
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/lm/ot1lmr.fd
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/map/fontname/texfonts.map
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/lm/rm-lmr10.tfm
-INPUT ./cv_v1_6.aux
-INPUT ./cv_v1_6.aux
-INPUT cv_v1_6.aux
-OUTPUT cv_v1_6.aux
+INPUT ./cv_profile_v1_5.aux
+INPUT ./cv_profile_v1_5.aux
+INPUT cv_profile_v1_5.aux
+OUTPUT cv_profile_v1_5.aux
 INPUT /usr/local/texlive/2024/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 INPUT /usr/local/texlive/2024/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 INPUT /usr/local/texlive/2024/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
@@ -200,7 +200,7 @@ INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/graphics/color.sty
-OUTPUT cv_v1_6.pdf
+OUTPUT cv_profile_v1_5.pdf
 INPUT ./profile/whcheng_profile.jpg
 INPUT ./profile/whcheng_profile.jpg
 INPUT ./profile/whcheng_profile.jpg
@@ -252,7 +252,7 @@ INPUT /usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/fontawesome5/fa5free1.e
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/fontawesome5/fa5brands0.enc
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc
-INPUT cv_v1_6.aux
+INPUT cv_profile_v1_5.aux
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/fontawesome5/FontAwesome5Brands-Regular.pfb
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/fontawesome5/FontAwesome5Free-Regular.pfb
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/fontawesome5/FontAwesome5Free-Solid.pfb
