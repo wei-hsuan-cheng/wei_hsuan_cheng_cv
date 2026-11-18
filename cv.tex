@@ -53,6 +53,8 @@
 \setlength{\parindent}{0pt} % no indentation
 \setlength{\topskip}{0pt} % no top skip
 \setlength{\columnsep}{0cm} % set column seperation
+\widowpenalty=10000 % never leave a single line of a paragraph at a page break
+\clubpenalty=10000
 \makeatletter
 \let\ps@customFooterStyle\ps@plain % Copy the plain style to customFooterStyle
 \patchcmd{\ps@customFooterStyle}{\thepage}{
@@ -61,7 +63,7 @@
 \makeatother
 \pagestyle{customFooterStyle}
 
-\titleformat{\section}{\needspace{4\baselineskip}\bfseries\large}{}{0pt}{}[\vspace{1pt}\titlerule]
+\titleformat{\section}{\needspace{6\baselineskip}\bfseries\large}{}{0pt}{}[\vspace{1pt}\titlerule]
 
 \titlespacing{\section}{
     % left space:
@@ -110,10 +112,11 @@
     \end{adjustwidth}
 } % new environment for one column entries
 
-\newenvironment{twocolentry}[2][]{
+\newenvironment{twocolentry}[2][4.5 cm]{
+    \needspace{4\baselineskip}% keep an entry's header with its first lines
     \onecolentry
     \def\secondColumn{#2}
-    \setcolumnwidth{\fill, 4.5 cm}
+    \setcolumnwidth{\fill, #1}
     \begin{paracol}{2}
 }{
     \switchcolumn \raggedleft \secondColumn
@@ -133,7 +136,7 @@
         \LenToUnit{\paperwidth-2 cm-0.2 cm+0.05cm},
         \LenToUnit{\paperheight-1.0 cm}
     ){\vtop{{\null}\makebox[0pt][c]{
-        \small\color{gray}\textit{Last updated in July 2025}\hspace{\widthof{Last updated in July 2025}}
+        \small\color{gray}\textit{Last updated in Nov 2026}\hspace{\widthof{Last updated in Nov 2026}}
     }}}%
   }%
 }%
@@ -201,90 +204,46 @@
 
     \vspace{0.3 cm - 0.3 cm}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%% Education %%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-    \section{Education}
-        
-        \begin{twocolentry}{
-            
-            
-        \textit{May 2025}}
-            \textbf{National Taiwan University (NTU)}
-
-            \textit{Master's in Biomechatronics Engineering}
-        \end{twocolentry}
-
-        \vspace{0.10 cm}
-        \begin{onecolentry}
-            \begin{highlights}
-                \item Overall GPA: 4.14/4.3
-                \item Scholarships: 2023 Master's Student Scholarship (First Place) from Dept. Biomechatronics Engineering, NTU
-                \item \textbf{Coursework:} Robotics, Optimal Control, Stochastic Control, Robust Control, System Identification, Linear Systems
-                \item \textbf{Master's Thesis:} Application of Vision- and Force-Based Supervisory Teleoperation for Robotic Dexterous Manipulation Tasks in Industrial Surveillance
-            \end{highlights}
-        \end{onecolentry}
-
-        \vspace{0.2 cm}
-
-        \begin{twocolentry}{
-            
-        \textit{June 2022}}
-            \textbf{National Tsing Hua University (NTHU)}
-            
-            \textit{Bachelor in Interdisciplinary Programme of Nuclear Science (IPNS)}
-        \end{twocolentry}
-        \vspace{0.10 cm}
-        \begin{onecolentry}
-            \begin{highlights}
-                \item Specialising in Energy Engineering and Power Mechanical Engineering.
-            \end{highlights}
-        \end{onecolentry}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%% Skills %%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-    \section{Skills}
-
-        \begin{onecolentry}
-            \textbf{Programming:} C++, Python, MATLAB, JavaScript, LaTeX
-        \end{onecolentry}
-        \vspace{0.2 cm}
-        \begin{onecolentry}
-            \textbf{Robotics Research Interests:} Motion Planning and Control, Kalman Filtering, Computer Vision, Vision- and Force-based Control, Mobile Robot Localisation and Navigation, Application of Conformal Geometric Algebra (CGA) in Robotics
-        \end{onecolentry}
-        \vspace{0.2 cm}
-        \begin{onecolentry}
-            \textbf{Software/Hardware/Tools:} ROS 1 \& 2, MoveIt2!, PCL, PyQt5, Git, Docker, SolidWorks, onshape, NVIDIA Jetson, STM32/ESP32 MCU 
-        \end{onecolentry}
-
-        \vspace{0.2 cm}
-        \begin{onecolentry}
-            \textbf{Languages:} Mandarin Chinese (native), English (fluent; proficient in academic presentations and team leadership as NTU project lead for a mixed local–international team)
-        \end{onecolentry}
-
-
-
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%% Research Experience %%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     \section{Research Experience}
-        
+
         \begin{twocolentry}{
-        \textit{Taipei, Taiwan}    
-            
-        \textit{Dec 2023 – May 2025}}
-            \textbf{\href{https://dnc.ntu.edu.tw/en}{Delta-NTU Joint Research \& Development Centre}}
-            
-            \textit{Project leader in the collaboration research project of NTU and the CTO Office in Delta Electronics, Inc.}
+        \textit{Taipei, Taiwan}
+
+        \textit{Oct 2025 – Present}}
+            \textbf{\href{https://www.deltaww.com/en-US/company/innovation}{Delta Robotics Innovation Center (DRIC)}}
+
+            \textit{Associate Researcher, Delta Electronics, Inc.}
         \end{twocolentry}
 
         \vspace{0.10 cm}
         \begin{onecolentry}
+            \begin{highlights}
+                \item Focus on model-based control and estimation methods (e.g., force control, kinematics/dynamics MPC, visual servoing, KF-family).
+                \item Develop these methods across various robotic embodiments—including dual-arm systems, dexterous hands, mobile manipulators, and integrated combinations of these platforms, all validated on real hardware.
+                \item The dual-arm system, using MPC as whole-body control (WBC) with joint torque sensing for safe physical interaction and 1 kHz EtherCAT communication, was showcased at \textbf{Automation Taipei 2026} (Taipei International Industrial Automation Exhibition).
+            \end{highlights}
+        \end{onecolentry}
+
+        \vspace{0.2 cm}
+
+        \begin{twocolentry}{
+        \textit{Taipei, Taiwan}    
+            
+        \textit{Dec 2023 – May 2025}}
+            \textbf{\href{https://dnc.ntu.edu.tw/en}{Delta-NTU Joint Research \& Development Center}}
+            
+            \textit{Project lead in the collaboration research project of NTU and the CTO Office in Delta Electronics, Inc.}
+        \end{twocolentry}
+
+        \vspace{0.10 cm}
+        \begin{onecolentry}
+        \needspace{4\baselineskip} % keep this heading with its first bullet
         \textbf{Supervisory Teleoperation of Manipulator for Surveillance}
             \begin{highlights}
-                \item Develop a reliable supervisory robotic system for performing dexterous manipulation tasks in industrial surveillance scenario (\textit{e.g.} buttons, switches, and valves operations). The system utilises a local–remote teleoperation setup with wireless communication, separating the local site—which comprises the control console, user interface, and input device—from the remote site, where the robot performs tasks with sensors and algorithms deployed.
+                \item Develop a reliable supervisory robotic system for performing dexterous manipulation tasks in industrial surveillance scenario (\textit{e.g.} buttons, switches, and valves operations). The system utilizes a local–remote teleoperation setup with wireless communication, separating the local site—which comprises the control console, user interface, and input device—from the remote site, where the robot performs tasks with sensors and algorithms deployed.
                 \item \textbf{Unified 6-DoF Vision Alignment:} Employ a state-of-the-art deep learning method for 6D object pose estimation with a position-based visual servo (PBVS) control scheme. This combination serves as a unified 6-DoF vision alignment method, which is essential for performing precise manipulation tasks for versatile objects in industrial settings.
                 \item \textbf{Vision Alignment Corrected by Force:} Apply force control to further correct the vision alignment errors. The integration of two complementary sensory modalities (vision-and-force) provides enhanced accuracy for robotic dexterous manipulation.
             \end{highlights}
@@ -314,7 +273,7 @@ Electronics Annual Innovation Showcase}.
             \begin{highlights}
                 \item Agricultural Robot:
                 \begin{itemize}
-                    \item Improve EKF-SLAM for agricultural tracked mobile robot by involving IMU bias estimation and on-line state covariance update.
+                    \item Improve EKF-SLAM for agricultural tracked mobile robot by involving IMU bias estimation and online state covariance update.
                     \item Apply vision-based control scheme and object 6D pose estimation for robotic tomato harvesting.
                 \end{itemize}
                 \item Surgical Robot:
@@ -322,6 +281,69 @@ Electronics Annual Innovation Showcase}.
                     \item Improve attitude and angular velocity estimation, and the visual servo control scheme for surgical robot end-effector using multi-sensor fusion and a quaternion-based EKF.
                 \end{itemize}
             \end{highlights}
+        \end{onecolentry}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%% Education %%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    \needspace{10\baselineskip} % start Education with its first entry, not one line of it
+    \section{Education}
+        
+        \begin{twocolentry}{
+            
+            
+        \textit{May 2025}}
+            \textbf{National Taiwan University (NTU)}
+
+            \textit{Master's in Biomechatronics Engineering}
+        \end{twocolentry}
+
+        \vspace{0.10 cm}
+        \begin{onecolentry}
+            \begin{highlights}
+                \item Overall GPA: 4.14/4.3
+                \item Scholarships: 2023 Master's Student Scholarship (First Place) from Dept. Biomechatronics Engineering, NTU
+                \item \textbf{Coursework:} Robotics, Optimal Control, Stochastic Control, Robust Control, System Identification, Linear Systems
+                \item \textbf{Master's Thesis:} Application of Vision- and Force-Based Supervisory Teleoperation for Robotic Dexterous Manipulation Tasks in Industrial Surveillance
+            \end{highlights}
+        \end{onecolentry}
+
+        \vspace{0.2 cm}
+
+        \begin{twocolentry}{
+            
+        \textit{June 2022}}
+            \textbf{National Tsing Hua University (NTHU)}
+            
+            \textit{Bachelor in Interdisciplinary Program of Nuclear Science (IPNS)}
+        \end{twocolentry}
+        \vspace{0.10 cm}
+        \begin{onecolentry}
+            \begin{highlights}
+                \item Specializing in Energy Engineering and Power Mechanical Engineering.
+            \end{highlights}
+        \end{onecolentry}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%% Skills %%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    \section{Skills}
+
+        \begin{onecolentry}
+            \textbf{Programming:} C++, Python, MATLAB, JavaScript, LaTeX
+        \end{onecolentry}
+        \vspace{0.2 cm}
+        \begin{onecolentry}
+            \textbf{Robotics Research Interests:} Model-based control and estimation for contact-rich/compliant manipulation and legged/wheeled-legged locomotion: Model Predictive Control (MPC), Whole-Body Control (WBC), Kalman Filtering (KF, EKF, UKF, InEKF), Compliance Control (force, admittance, impedance), Vision-based Control, Conformal Geometric Algebra (CGA) in Robotics
+        \end{onecolentry}
+        \vspace{0.2 cm}
+        \begin{onecolentry}
+            \textbf{Software/Hardware/Tools:} ROS 1 \& 2, ros2\_control, OCS2, Pinocchio, HPIPM, MuJoCo, JAX, MoveIt 2, BehaviorTree.CPP, PCL, PyQt5, Git, Docker, SolidWorks, Onshape, NVIDIA Jetson, STM32/ESP32 MCU
+        \end{onecolentry}
+
+        \vspace{0.2 cm}
+        \begin{onecolentry}
+            \textbf{Languages:} Mandarin Chinese (native), English (fluent; proficient in academic presentations and team leadership as NTU project lead for a mixed local–international team)
         \end{onecolentry}
 
 
@@ -355,42 +377,81 @@ Electronics Annual Innovation Showcase}.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     \section{Selected Projects}
 
-        \begin{twocolentry}{
-            \hrefWithoutArrow{https://github.com/wei-hsuan-cheng/kf_cpp}{{\footnotesize\faGithub}\hspace*{0.13cm}kf\_cpp}\textit{, May 2023}
-            }
-
-            \textbf{Attitude and Angular Velocity Estimation of Surgical Robot Using Sensor Fusion with Optical Tracker, IMU, and Quaternion-based Extended Kalman Filter}
+        \begin{twocolentry}[4.9 cm]{
+        \textit{Nov 2026}
+        }
+            \textbf{GPU-Accelerated MPC with TurboMPC behind OCS2}
         \end{twocolentry}
         \vspace{0.10 cm}
         \begin{onecolentry}
             \begin{highlights}
-                \item A multi-sensor fusion framework is used for estimating the attitude and angular velocity of surgical robot end-effector, for better robustness (against occlusions) and tracking precision in minimally invasive surgeries.
-                \item An quaternion-based EKF algorithm is derived based on a constant angular velocity model.
-                \item The EKF and UKF algorithm are implemented in ROS 2 C++.
+                \item Integrate TurboMPC (JAX, CPU or GPU) with FRAX dynamics as the solver behind OCS2 inverse-dynamics MPC controllers in ros2\_control, through a shared-memory Python worker. Validated in MuJoCo simulation.
             \end{highlights}
         \end{onecolentry}
-
         \vspace{0.2 cm}
 
-        \begin{twocolentry}{
-        \hrefWithoutArrow{https://github.com/wei-hsuan-cheng/kendo_robot}{{\footnotesize\faGithub}\hspace*{0.13cm}kendo\_robot}\textit{, Dec 2023}
+        \begin{twocolentry}[4.9 cm]{
+        \hrefWithoutArrow{https://github.com/wei-hsuan-cheng/legged_robot_mpc_controller}{{\footnotesize\faGithub}\hspace*{0.13cm}legged\_robot\_mpc\_controller}\\\textit{Oct 2026}
+        }
+            \textbf{Legged Robot MPC: Whole-Body Inverse-Dynamics MPC for Humanoids and Wheeled-Bipeds}
+        \end{twocolentry}
+        \vspace{0.10 cm}
+        \begin{onecolentry}
+            \begin{highlights}
+                \item Whole-body inverse-dynamics MPC in ros2\_control for the Unitree G1 and H2 humanoids and the Upkie wheeled biped (OCS2, Pinocchio): optimizes configuration, velocity, contact wrenches, accelerations, and torques over a 1 s horizon under the full rigid-body dynamics, at 100–200 Hz (SQP, HPIPM).
+                \item Proprioceptive state estimation without ground truth (contact-aided InEKF or linear KF, as chainable ros2\_control controllers) and a hardware-ready bring-up from a crouch.
+                \item Validated in MuJoCo simulation: humanoid walking, running, stumble recovery, and uneven terrain; rolling-contact constraints and a planned stand-up from kneeling for the wheeled biped over ramps and steps.
+            \end{highlights}
+        \end{onecolentry}
+        \vspace{0.2 cm}
+
+        \begin{twocolentry}[4.9 cm]{
+        \hrefWithoutArrow{https://github.com/wei-hsuan-cheng/dynamics_mpc_controller}{{\footnotesize\faGithub}\hspace*{0.13cm}dynamics\_mpc\_controller}\\\textit{June 2026}
+        }
+            \textbf{Robotic Arm Dynamics MPC: Inverse- and Forward-Dynamics MPC}
+        \end{twocolentry}
+        \vspace{0.10 cm}
+        \begin{onecolentry}
+            \begin{highlights}
+                \item Inverse-dynamics (RNEA equality, optimizing accelerations, torques, and the end-effector wrench) and forward-dynamics (ABA) MPC in ros2\_control for single and dual UR5 arms, built on OCS2 and Pinocchio; real-time-iteration SQP with HPIPM at 100 Hz. Validated in MuJoCo simulation.
+                \item Self-collision and moving-obstacle avoidance, with collisions handled by sphere approximation.
+                \item External end-effector wrench estimation with a momentum observer.
+            \end{highlights}
+        \end{onecolentry}
+        \vspace{0.2 cm}
+
+        \begin{twocolentry}[4.9 cm]{
+        \hrefWithoutArrow{https://github.com/wei-hsuan-cheng/stewart_platform_sim.git}{{\footnotesize\faGithub}\hspace*{0.13cm}stewart\_platform\_sim}\\\textit{July 2025}
+        }
+            \textbf{stewart\_platform\_sim: Six-DoF Stewart-Gough Platform Simulation}
+        \end{twocolentry}
+        \vspace{0.10 cm}
+        \begin{onecolentry}
+            \begin{highlights}
+                \item ROS 2 Python simulation of a six-DoF Stewart platform (or Stewart-Gough platform), which is a parallel manipulator comprising a fixed base platform, a moving end-effector platform, and six serial SPS structures.
+                \item The inverse kinematics (IK) and differential kinematics (DK) problems are solved to obtain the required leg lengths and leg velocities for driving the robot to achieve a desired motion in $SE(3)$.
+            \end{highlights}
+        \end{onecolentry}
+        \vspace{0.2 cm}
+
+        \begin{twocolentry}[4.9 cm]{
+        \hrefWithoutArrow{https://github.com/wei-hsuan-cheng/kendo_robot}{{\footnotesize\faGithub}\hspace*{0.13cm}kendo\_robot}\\\textit{Dec 2023}
         }
             \textbf{Kendo Robot: Combining Robotics Technologies with Martial Art}
         \end{twocolentry}
         \vspace{0.10 cm}
         \begin{onecolentry}
             \begin{highlights}
-                \item A supervisory teleoperation kendo robot system. The robotic arm holding kendo sword tracks the opponent’s pose and wait for the operator’s command to attack on different body positions.
-                \item Detect and track the 3D human body by DL-based real-time human pose estimation algorithm and RGB-D alignment. An interactive GUI is built using JavaScript for real-time visualisation and robotic motion planning.
+                \item A supervisory teleoperation kendo robot system. The robotic arm holding kendo sword tracks the opponent’s pose and waits for the operator’s command to attack on different body positions.
+                \item Detect and track the 3D human body by DL-based real-time human pose estimation algorithm and RGB-D alignment. An interactive GUI is built using JavaScript for real-time visualization and robotic motion planning.
                 \item Robotic arm IK solver and sword motion planner are designed based on a new mathematical framework, conformal geometric algebra (CGA).
-                \item Developed using ROS 1 Python, and a web-based interacture GUI uisng JavaScript. ROS-JavaScript communication through web socket.
+                \item Developed using ROS 1 Python, and a web-based interactive GUI using JavaScript. ROS-JavaScript communication through web socket.
             \end{highlights}
         \end{onecolentry}
-
         \vspace{0.2 cm}
 
-        \begin{twocolentry}{
-        \hrefWithoutArrow{https://github.com/wei-hsuan-cheng/cga_ik}{{\footnotesize\faGithub}\hspace*{0.13cm}cga\_ik}\textit{, Nov 2023}
+        \begin{twocolentry}[4.9 cm]{
+        \hrefWithoutArrow{https://github.com/wei-hsuan-cheng/cga_ik}{{\footnotesize\faGithub}\hspace*{0.13cm}cga\_ik}\\\textit{Nov 2023}
         }
             \textbf{CGA IK: Closed-Form Inverse Kinematics Solver based on CGA}
         \end{twocolentry}
@@ -399,22 +460,23 @@ Electronics Annual Innovation Showcase}.
             \begin{highlights}
                 \item Aim to promote a new mathematical framework \textbf{conformal geometric algebra (CGA)} for robotics applications. 
                 \item Implemented closed-form IK solvers for a 6-DoF collaborative robot (cobot) and a 3-DoF spherical parallel manipulator (SPM) based on CGA.
-                \item Simulated and visualised in a web-based interactive GUI using JavaScript. Implemented in  ROS 2 C++ and tested on a real robot.
+                \item Simulated and visualized in a web-based interactive GUI using JavaScript. Implemented in ROS 2 C++ and tested on a real robot.
             \end{highlights}
         \end{onecolentry}
-
         \vspace{0.2 cm}
 
-        \begin{twocolentry}{
-        \hrefWithoutArrow{https://github.com/wei-hsuan-cheng/stewart_platform_sim.git}{{\footnotesize\faGithub}\hspace*{0.13cm}stewart\_platform\_sim}\textit{, July 2025}
-        }
-            \textbf{stewart\_platform\_sim: Six-DoF Stewart-Gough Platform Simulation}
+        \begin{twocolentry}[4.9 cm]{
+            \hrefWithoutArrow{https://github.com/wei-hsuan-cheng/kf_cpp}{{\footnotesize\faGithub}\hspace*{0.13cm}kf\_cpp}\\\textit{May 2023}
+            }
+
+            \textbf{Attitude and Angular Velocity Estimation of Surgical Robot Using Sensor Fusion with Optical Tracker, IMU, and Quaternion-based Extended Kalman Filter}
         \end{twocolentry}
         \vspace{0.10 cm}
         \begin{onecolentry}
             \begin{highlights}
-                \item ROS 2 Python simulation of a six-DoF Stewart platform (or Stewart-Gough platform), which is a parallel manipulator comprising a fixed base platform, a moving end-effector platform, and six serial SPS sturctures.
-                \item The inverse kinematics (IK) and differential kinematics (DK) problems are solved as to obtain the required leg lengths and leg velocities for driving the robot to achieve a desired motion in $SE(3)$.
+                \item A multi-sensor fusion framework is used for estimating the attitude and angular velocity of surgical robot end-effector, for better robustness (against occlusions) and tracking precision in minimally invasive surgeries.
+                \item A quaternion-based EKF algorithm is derived based on a constant angular velocity model.
+                \item The EKF and UKF algorithms are implemented in ROS 2 C++.
             \end{highlights}
         \end{onecolentry}
 
@@ -427,11 +489,23 @@ Electronics Annual Innovation Showcase}.
         % \vspace{0.10 cm}
         % \begin{onecolentry}
         %     \begin{highlights}
-        %         \item Stabilise the Furuta pendulum system by the design of state-observer feedback controller. An internal model is ustilised to reject the sinusoidal process noise in the input signal of maxon motor. 
+        %         \item Stabilize the Furuta pendulum system by the design of state-observer feedback controller. An internal model is utilized to reject the sinusoidal process noise in the input signal of maxon motor. 
         %         \item Course project of EE5128 Linear Systems @ NTU EE. System dynamics and control algorithm are simulated in Simulink, Simscape, and MATLAB.
         %     \end{highlights}
         % \end{onecolentry}
         
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%% Other Open-Source Work %%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    \section{Other Open-Source Work}
+
+        \begin{onecolentry}
+            \begin{highlights}
+                \item \textbf{\href{https://wei-hsuan-cheng.github.io/robotics-notes/}{Robotics Notes}:} notes documenting my robotics learning journey, from MPC to rigid-body dynamics.
+                \item \textbf{Tools:} \mbox{\hrefWithoutArrow{https://github.com/wei-hsuan-cheng/visualize_convex_optimization}{{\footnotesize\faGithub}\hspace*{0.13cm}visualize\_convex\_optimization}} (interactive convex optimization figures), \mbox{\hrefWithoutArrow{https://github.com/wei-hsuan-cheng/m3t_ros2}{{\footnotesize\faGithub}\hspace*{0.13cm}m3t\_ros2}} (M3T object tracking in ROS 2), \mbox{\hrefWithoutArrow{https://github.com/wei-hsuan-cheng/urdf_to_screw_list}{{\footnotesize\faGithub}\hspace*{0.13cm}urdf\_to\_screw\_list}} (URDF to PoE screws).
+            \end{highlights}
+        \end{onecolentry}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%% Teaching Assistants %%%%%%%%%%
@@ -439,14 +513,14 @@ Electronics Annual Innovation Showcase}.
     \section{Teaching Assistants (TAs)}
     
         \begin{twocolentry}{
-        \textit{Autumn 2022}}
+        \textit{Fall 2022}}
             \textbf{Engineering Mathematics (I)}
         \end{twocolentry}
 
         \vspace{0.2 cm}
 
         \begin{twocolentry}{
-        \textit{Autumn 2022}}
+        \textit{Fall 2022}}
             \textbf{Introduction to Foreign Literature on Bio-Systems Engineering}
         \end{twocolentry}
         
@@ -457,7 +531,7 @@ Electronics Annual Innovation Showcase}.
     
         \begin{twocolentry}{
         \textit{Dec 2023}}
-            \textbf{Robotics Competition Winner (Kendo Robot)} as a team leader in the course project of CSIE5074 Robotics, offered by Prof. Li-Chen Fu @ NTU EE.
+            \textbf{Robotics Competition Winner (Kendo Robot)} as team lead in the course project of CSIE5074 Robotics, offered by Prof. Li-Chen Fu @ NTU EE.
         \end{twocolentry}
 
 
